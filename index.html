@@ -10,7 +10,7 @@
       href="./images/png-transparent-gold.png"
       type="image/x-icon"
     />
-    <title>Static - Boiler Plate</title>
+    <title>Pig Game | By SaKa</title>
     <!-- fontAwesome CDN -->
     <link
       rel="stylesheet"
@@ -26,7 +26,44 @@
     <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
-    <h1>Hello</h1>
+    <!-- first card -->
+    <section class="card-one">
+      <div class="play-one">
+        <div class="player-name">*PIG*</div>
+        <img src="./images/pig.img.png" alt="pig-img" class="image" />
+      </div>
+      <div class="score-container">
+        <p class="current">current</p>
+        <p class="score">0</p>
+      </div>
+    </section>
+    <!-- dice img add -->
+    <div class="dice-img">
+      <img
+        src="./images/dice-1.png"
+        alt="Playing dice"
+        class="dice"
+        id="dice"
+      />
+    </div>
+    <div class="button-section">
+      <button class="btn btn--new" id="btn--new">🔄 New game</button>
+      <button class="btn btn--roll" id="btn--roll">🎲 Roll dice</button>
+      <button class="btn btn--hold" id="btn--hold">📥 Hold</button>
+    </div>
+    <!-- img end -->
+    <!-- secund card -->
+    <section class="card-two">
+      <div class="play-two">
+        <div class="player-name">BULL</div>
+        <img src="./images/Bull.img.jpg" alt="bull-img" class="image" />
+      </div>
+      <div class="score-container">
+        <p class="current">current</p>
+        <p class="score">0</p>
+      </div>
+    </section>
+
     <!-- custom script -->
     <script src="./scripts/script.js"></script>
   </body>
