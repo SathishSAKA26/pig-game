@@ -23,7 +23,6 @@ html {
   --clr-black: #0c0b0b;
   --box-shadow: 0px 22px 12px rgba(0, 0, 0, 0.15);
 }
-
 body {
   font-family: "Bungee", cursive;
   width: 100%;
@@ -37,7 +36,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 1rem;
+
   gap: 1rem;
 }
 
@@ -67,6 +66,7 @@ li {
   border-radius: 30px;
   margin-bottom: 1rem;
 }
+
 
 .player-name {
   font-size: 2rem;
