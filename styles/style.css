@@ -28,14 +28,17 @@ body {
   font-family: "Bungee", cursive;
   width: 100%;
   height: 100vh;
-  background-image: url('../images/desktop.jpg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: auto;
+  background: rgb(214, 128, 166);
+  background: linear-gradient(
+    90deg,
+    rgba(214, 128, 166, 1) 0%,
+    rgba(131, 184, 246, 1) 100%
+  );
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 2rem;
+  margin-top: 1rem;
+  gap: 1rem;
 }
 
 /* global css */
@@ -56,12 +59,13 @@ li {
 .card-one,
 .card-two {
   width: 80%;
-  border: 2px ridge var(--clr-black);
+  border: 20px ridge #688fc4af;
   display: flex;
   align-items: center;
   flex-direction: column;
   text-align: center;
   border-radius: 30px;
+  margin-bottom: 1rem;
 }
 
 .player-name {
@@ -72,8 +76,8 @@ li {
 
 .image {
   width: 35%;
-  border-radius: 28px;
-  padding-bottom: 1rem;
+  border-radius: 20px;
+  margin: 1rem;
 }
 
 .score-container {
@@ -95,6 +99,31 @@ li {
   font-size: 2.6rem;
 }
 
-.dice-img{
-  width: 30%;
+.dice-img {
+  width: 25%;
+}
+
+.dice {
+  border-radius: 20px;
+}
+
+.button-section{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.35rem;
+}
+
+.btn {
+  width: 120px;
+  height: 40px;
+  color: var(--clr-white);
+  font-size: 15px;
+  text-align: center;
+  border-radius: 50px;
+  border: none;
+  background: linear-gradient(-45deg, #ff3d77, #338aff, #3cf0c5);
+  cursor: pointer;
 }
