@@ -67,7 +67,6 @@ li {
   margin-bottom: 1rem;
 }
 
-
 .player-name {
   font-size: 2rem;
   color: var(--clr-paradise-pink);
@@ -83,11 +82,10 @@ li {
 .score-container {
   text-align: center;
   margin-bottom: 1rem;
-  border: 2px solid var(--clr-black);
+  border: 3px solid var(--clr-midnight-green-eagle-green);
   padding: 1rem;
   border-radius: 50%;
-  background-color: #3ee676ce;
-  border: none;
+  background-color: #3ee6de4b;
 }
 
 .current {
@@ -99,6 +97,15 @@ li {
   font-size: 2.6rem;
 }
 
+.dic-btn-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 1rem;
+}
+
 .dice-img {
   width: 25%;
 }
@@ -107,7 +114,7 @@ li {
   border-radius: 20px;
 }
 
-.button-section{
+.button-section {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -117,7 +124,7 @@ li {
 }
 
 .btn {
-  width: 120px;
+  width: 115px;
   height: 40px;
   color: var(--clr-white);
   font-size: 15px;
@@ -126,4 +133,34 @@ li {
   border: none;
   background: linear-gradient(-45deg, #ff3d77, #338aff, #3cf0c5);
   cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+
+  .card-one,
+  .card-two {
+    width: 30%;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .score-container {
+    margin-top: 10rem;
+  }
+
+  .btn {
+    width: 160px;
+    height: 50px;
+    font-size: 1.2rem;
+  }
 }
