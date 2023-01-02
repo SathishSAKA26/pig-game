@@ -140,6 +140,19 @@ li {
   cursor: pointer;
 }
 
+.hidden{
+  display: none;
+}
+
+.player-active{
+  background-color: rgba(142, 238, 193, 0.514);
+  border: 20px ridge #038619c5;
+}
+
+.player-winner{
+  
+}
+
 @media screen and (min-width: 768px) {
   body {
     display: flex;

@@ -19,14 +19,79 @@ const diceEl = document.getElementById("dice");
 // global variable
 let scores, currentScore, activePlayer, dice;
 
-// functions
-
 // init function
 function init() {
+  // global value
   scores = 0;
   currentScore = 0;
-  activePlayer = 0;
+  activePlayer = 1;
   dice = 0;
 
-  
+  // initial scores
+  score0El.innerText = 0;
+  score1El.innerText = 0;
+  curScore0El.innerText = 0;
+  curScore1El.innerText = 0;
+
+  // active player
+  player0El.classList.add("player-active");
+  player1El.classList.remove("player-active");
+
+  // button function
+  btnRoll.classList.remove("hidden");
+  btnHold.classList.remove("hidden");
+
+  // dice img hidden
+  diceEl.classList.add("hidden");
+}
+
+// functions
+function getRandomNumber(num) {
+  // create random number
+  return Math.floor(Math.random() * num) + 1;
+}
+
+// toggle function
+function switchPlayer() {
+  player0El.classList.toggle("player-active");
+  player1El.classList.toggle("player-active");
+
+  // display score
+  document.getElementById(`score-${activePlayer}`).innerText =
+    scores[activePlayer];
+  currentScore = 0;
+
+  document.getElementById(`current-${activePlayer}`).innerText = currentScore;
+
+  // event listeners
+  btnRoll.addEventListener("click", function () {
+    // get random number 1 to 6
+    dice = getRandomNumber(6);
+
+    // dice === 1
+
+    if (dice !== 1) {
+      currentScore = currentScore + dice;
+      console.log(currentScore);
+
+      // display current score to ui
+      document.getElementById(`current-${activePlayer}`).innerText =
+        currentScore;
+    } else {
+      // switch to other player
+      switchPlayer();
+    }
+  });
+
+  // add current score to score
+  btnHold.addEventListener("click", function () {
+    scores[activePlayer] = scores[activePlayer] + currentScore;
+    currentScore = 0;
+
+    // if score is >= 100
+    if(scores[activePlayer] >= 10){
+      // player wins
+      document.getElementById(`player-${}`)
+    }
+  });
 }
