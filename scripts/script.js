@@ -1,4 +1,4 @@
-"use strict";
+"use strict"
 
 // selecting elements
 const btnNew = document.getElementById("btn--new");
@@ -24,7 +24,7 @@ function init() {
   // global value
   scores = 0;
   currentScore = 0;
-  activePlayer = 1;
+  activePlayer = 0;
   dice = 0;
 
   // initial scores
@@ -49,7 +49,7 @@ function init() {
 function getRandomNumber(num) {
   // create random number
   return Math.floor(Math.random() * num) + 1;
-}
+};
 
 // toggle function
 function switchPlayer() {
@@ -64,13 +64,14 @@ function switchPlayer() {
   document.getElementById(`current-${activePlayer}`).innerText = currentScore;
 
   // ternary operators switch players
-  activePlayer = activePlayer === 1 ? 2 : 1;
+  activePlayer = activePlayer === 0 ? 1 : 0;
 }
 // event listeners
 btnRoll.addEventListener("click", function () {
   // get random number 1 to 6
   dice = getRandomNumber(6);
 
+  console.log(dice);
   // display dice
   diceEl.classList.remove("hidden");
   diceEl.src = `./images/dice-${dice}.png`;
