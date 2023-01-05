@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 
 // selecting elements
 const btnNew = document.getElementById("btn--new");
@@ -22,7 +22,7 @@ let scores, currentScore, activePlayer, dice;
 // init function
 function init() {
   // global value
-  scores = 0;
+  scores = [0, 0];
   currentScore = 0;
   activePlayer = 0;
   dice = 0;
@@ -49,7 +49,7 @@ function init() {
 function getRandomNumber(num) {
   // create random number
   return Math.floor(Math.random() * num) + 1;
-};
+}
 
 // toggle function
 function switchPlayer() {
@@ -70,15 +70,13 @@ function switchPlayer() {
 btnRoll.addEventListener("click", function () {
   // get random number 1 to 6
   dice = getRandomNumber(6);
-
-  console.log(dice);
   // display dice
   diceEl.classList.remove("hidden");
   diceEl.src = `./images/dice-${dice}.png`;
 
-  // dice === 1
+  // dice === 0
 
-  if (dice !== 1) {
+  if (dice !== 0) {
     currentScore = currentScore + dice;
     console.log(currentScore);
 
