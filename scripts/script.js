@@ -57,11 +57,11 @@ function switchPlayer() {
   player1El.classList.toggle("player-active");
 
   // display score
-  document.getElementById(`score--0-${activePlayer}`).innerText =
+  document.getElementById(`score-${activePlayer}`).innerText =
     scores[activePlayer];
   currentScore = 0;
 
-  document.getElementById(`current-${activePlayer}`).innerText = currentScore;
+  document.getElementById(`current--${activePlayer}`).innerText = currentScore;
 
   // ternary operators switch players
   activePlayer = activePlayer === 0 ? 1 : 0;
@@ -76,12 +76,13 @@ btnRoll.addEventListener("click", function () {
 
   // dice === 0
 
-  if (dice !== 0) {
+  if (dice !== 1) {
     currentScore = currentScore + dice;
     console.log(currentScore);
 
     // display current score to ui
-    document.getElementById(`current - ${activePlayer}`).innerText = currentScore;
+    document.getElementById(`current--${activePlayer}`).innerText =
+      currentScore;
   } else {
     // switch to other player
     switchPlayer();
@@ -93,17 +94,17 @@ btnHold.addEventListener("click", function () {
   scores[activePlayer] = scores[activePlayer] + currentScore;
   currentScore = 0;
 
-  document.getElementById(`current-${activePlayer}`).innerText = currentScore;
+  document.getElementById(`current--${activePlayer}`).innerText = currentScore;
 
   // if score is >= 100
   if (scores[activePlayer] >= 10) {
     // player wins
     document
-      .getElementById(`player-${activePlayer}`)
+      .getElementById(`player--${activePlayer}`)
       .classList.remove("player-active");
 
     document
-      .getElementById(`player-${activePlayer}`)
+      .getElementById(`player--${activePlayer}`)
       .classList.add("player-winner");
 
     document.getElementById(`score-${activePlayer}`).innerText =
