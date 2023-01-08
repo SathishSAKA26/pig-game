@@ -57,7 +57,7 @@ function switchPlayer() {
   player1El.classList.toggle("player-active");
 
   // display score
-  document.getElementById(`score-${activePlayer}`).innerText =
+  document.getElementById(`score--0-${activePlayer}`).innerText =
     scores[activePlayer];
   currentScore = 0;
 
@@ -81,7 +81,7 @@ btnRoll.addEventListener("click", function () {
     console.log(currentScore);
 
     // display current score to ui
-    document.getElementById(`current-${activePlayer}`).innerText = currentScore;
+    document.getElementById(`current - ${activePlayer}`).innerText = currentScore;
   } else {
     // switch to other player
     switchPlayer();
