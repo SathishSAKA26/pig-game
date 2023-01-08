@@ -97,9 +97,9 @@ li {
   font-size: 2.6rem;
 }
 
-.on-score{
+.on-score {
   font-size: 2.6rem;
-  color:rgb(35, 236, 142);
+  color: rgb(35, 236, 142);
 }
 
 .dic-btn-section {
@@ -140,17 +140,21 @@ li {
   cursor: pointer;
 }
 
-.hidden{
+.hidden {
   display: none;
 }
 
-.player-active{
+.player-active {
   background-color: rgba(142, 238, 193, 0.514);
   border: 20px ridge #038619c5;
 }
 
-.player-winner{
-  
+.player-winner {
+  background-image: url("../images/confetti-gif-3.gif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: cover;
 }
 
 @media screen and (min-width: 768px) {

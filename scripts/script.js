@@ -37,6 +37,9 @@ function init() {
   player0El.classList.add("player-active");
   player1El.classList.remove("player-active");
 
+  // Player Winner
+  player0El.classList.remove("player-winner");
+  player1El.classList.remove("player-winner");
   // button function
   btnRoll.classList.remove("hidden");
   btnHold.classList.remove("hidden");
